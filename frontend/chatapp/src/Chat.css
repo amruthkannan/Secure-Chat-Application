@@ -1,0 +1,133 @@
+/* General styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: #f0f2f5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+/* Chat container */
+.chat-container {
+  width: 400px;
+  max-width: 90%;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header */
+.chat-header {
+  background-color: #0078d7;
+  color: white;
+  padding: 16px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Messages display */
+.chat-messages {
+  flex-grow: 1;
+  padding: 16px;
+  overflow-y: auto;
+  background-color: #f9fafb;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.message {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: flex-start;
+}
+
+.message.sent {
+  justify-content: flex-end;
+}
+
+.message.received {
+  justify-content: flex-start;
+}
+
+.message .message-content {
+  max-width: 75%;
+  padding: 8px 12px;
+  border-radius: 16px;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.message.sent .message-content {
+  background-color: #0078d7;
+  color: white;
+  border-radius: 16px 16px 0 16px;
+}
+
+.message.received .message-content {
+  background-color: #e0e0e0;
+  color: #333;
+  border-radius: 16px 16px 16px 0;
+}
+
+/* Input area */
+.chat-input-container {
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  border-top: 1px solid #e0e0e0;
+  background-color: #f9fafb;
+}
+
+.chat-input {
+  flex-grow: 1;
+  padding: 10px 12px;
+  border: 1px solid #e0e0e0;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.chat-input:focus {
+  border-color: #0078d7;
+}
+
+.send-button {
+  background-color: #0078d7;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  margin-left: 8px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.send-button:hover {
+  background-color: #005bb5;
+}
+
+/* New styles for recipient input */
+.join-input {
+  padding: 10px 12px;
+  border: 1px solid #e0e0e0;
+  border-radius: 20px;
+  margin: 8px 0; /* Add margin for spacing */
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.join-input:focus {
+  border-color: #0078d7;
+}
